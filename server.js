@@ -5,6 +5,9 @@ const path = require('path');
 const port = process.env.PORT || 8080;
 const app = express();
 
+// Serve project-level HTML and JavaScript files
+app.use(express.static(__dirname));
+
 // Middleware to serve static files from the 'dist' directory
 // This directory should contain the built assets of your application
 // Ensure that the 'dist' directory exists and contains your static files.
